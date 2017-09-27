@@ -1,0 +1,17 @@
+{
+  "name": "le-devourer",
+  "version": "0.0.1",
+  "description": "Redis based event worker",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "test": "standard"
+  },
+  "dependencies": {
+    "ioredis": "^3.1.4",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
