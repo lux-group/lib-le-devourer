@@ -5,13 +5,25 @@
   "main": "index.js",
   "license": "ISC",
   "scripts": {
-    "test": "standard"
+    "test": "standard && mocha"
   },
   "dependencies": {
     "ioredis": "^3.1.4",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
     "standard": "^10.0.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach"
+    ]
   }
 }
