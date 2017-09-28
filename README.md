@@ -65,3 +65,7 @@ const { backlogQueueSize, processingQueueSize } = await devourer.getMetrics()
 
 ```
 
+## Development
+
+- `yarn test` - run tests
+
