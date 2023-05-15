@@ -9,7 +9,8 @@ const defaultOptions = {
   workerProcessingTimeout: 60,
   backlogQueueName: 'backlog',
   processingQueueName: 'processing',
-  redisUrl: null
+  redisUrl: null,
+  redisTls: null
 }
 
 const removeUndefined = (obj) => {
@@ -23,9 +24,9 @@ const removeUndefined = (obj) => {
 
 exports.createDevourer = (opts = {}) => {
   const options = Object.assign({}, defaultOptions, removeUndefined(opts))
-  const { workerConcurrency, workerProcessingTimeout, backlogQueueName, processingQueueName, redisUrl } = options
+  const { workerConcurrency, workerProcessingTimeout, backlogQueueName, processingQueueName, redisUrl, redisTls } = options
 
-  const redis = libRedis.init({ redisUrl })
+  const redis = libRedis.init({ redisUrl, redisTls })
 
   return {
     addTask: async (task) => {
