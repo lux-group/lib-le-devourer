@@ -1,6 +1,6 @@
 {
   "name": "le-devourer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Redis based event worker",
   "main": "index.js",
   "license": "ISC",
